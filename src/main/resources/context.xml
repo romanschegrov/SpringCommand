@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="help" class="impl.HelpCommand">
+        <property name="helpText" value="help - Команда для справки по всем командам"/>
+        <property name="commandName" value="help"/>
+    </bean>
+
+    <bean id="copy" class="impl.CopyCommand">
+        <property name="helpText" value="copy file/directory directory - Команда для копирования файла/каталога file/directory в каталог directory"/>
+        <property name="commandName" value="copy"/>
+    </bean>
+
+    <bean id="move" class="impl.MoveCommand">
+        <property name="helpText" value="move file/directory file/directory - Команда для перемещения файла/каталога file/directory в каталог directory"/>
+        <property name="commandName" value="move"/>
+    </bean>
+
+</beans>
